@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Comentarios</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="mostrarSeccion('crear')">Crear Comentario</a>
+        <a href="#" onclick="mostrarSeccion('lista')">Lista de Comentarios</a>
+        <a href="#" onclick="mostrarSeccion('acciones')">Acciones</a>
+    </div>
+
+    <div id="crear" class="seccion">
+        <h2>Crear Comentario</h2>
+        <form id="formComentario">
+            <textarea id="texto" placeholder="Comentario"></textarea>
+            <input type="text" id="email" placeholder="Correo del usuario" />
+            <input type="number" id="calificacion" placeholder="Calificación (1-5)" />
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <div id="lista" class="seccion">
+        <h2>Lista de Comentarios</h2>
+        <ul id="listaComentarios"></ul>
+    </div>
+
+    <div id="acciones" class="seccion">
+        <h2>Buscar / Actualizar / Eliminar</h2>
+        <input type="text" id="idBuscar" placeholder="ID del comentario" />
+        <button onclick="buscarComentario()">Buscar</button>
+        <textarea id="textoAccion" placeholder="Comentario"></textarea>
+        <input type="text" id="emailAccion" placeholder="Correo del usuario" />
+        <input type="number" id="calificacionAccion" placeholder="Calificación (1-5)" />
+        <button onclick="actualizarComentario()">Actualizar</button>
+        <button onclick="eliminarComentario()">Eliminar</button>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "_db_engine": "mysql",
+  "_host": "localhost",
+  "_port": 3306,
+  "_user": "root",
+  "_password": "12345",
+  "_database": "comentarios_db",
+
+
+  "comentarios_service_url": "http://localhost:8000/comentarios",
+  "notificaciones_service_url": "http://localhost:8000/notificaciones",
+  "usuarios_service_url": "http://localhost:8000/usuarios",
+
+
+  "api_base": "http://localhost:8000",
+  "endpoints": {
+  "create": "/comentarios",
+  "read_all": "/comentarios",
+  "read_one": "/comentarios/{id}",
+  "update": "/comentarios/{id}",
+  "delete": "/comentarios/{id}"}
+  
+
+}
+
